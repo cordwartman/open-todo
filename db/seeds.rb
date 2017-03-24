@@ -4,20 +4,23 @@ require 'faker'
 5.times do
   User.create!(
     email:  Faker::Internet.unique.email,
-    name:   Faker::LordOfTheRings.character
+    name:   Faker::LordOfTheRings.character,
+    password: Faker::Internet.password(8)
     )
 end
 
 # Create a main user
 admin = User.create(
   email:    'cordwartman@gmail.com',
-  name:     'Cord'
+  name:     'Cord',
+  password: 'password'
 )
 
 # Create a second main user
 admin = User.create!(
   email:    'test@example.com',
-  name:     'fake name'
+  name:     'fake name',
+  password: 'password'
 )
 
 users = User.all

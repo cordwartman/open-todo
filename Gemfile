@@ -32,6 +32,9 @@ gem 'figaro'
 # Serializes requests into JSON
 gem 'active_model_serializers', '~> 0.10.0'
 
+# Used for encrypting User passwords
+gem 'bcrypt'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

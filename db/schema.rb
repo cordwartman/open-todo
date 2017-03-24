@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322220808) do
+ActiveRecord::Schema.define(version: 20170323155933) do
 
   create_table "items", force: :cascade do |t|
     t.text     "body"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170322220808) do
     t.datetime "updated_at", null: false
     t.string   "email"
     t.text     "bio"
+    t.string   "password"
   end
 
 end
