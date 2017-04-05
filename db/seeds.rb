@@ -41,7 +41,8 @@ lists = List.all
 100.times do
   item = Item.create!(
     body: Faker::LordOfTheRings.location,
-    list: lists.sample
+    list: lists.sample,
+    complete: false
   )
   item.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
 end
